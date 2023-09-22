@@ -1,0 +1,77 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f2f2f2;
+}
+
+.hololive {
+    padding: 10px 40px;
+    background: #6e78ff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 18px;
+    color: #f2f2f2;
+    font-weight: 500;
+}
+
+.hololive-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hololive-container.active {
+    opacity: 1;
+    pointer-events: auto;
+    transition: .4s ease;
+}
+
+.hololive-container .hololive-box {
+    width: 500px;
+    background: #f2f2f2;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    padding: 30px;
+    transform: scale(0);
+}
+
+.hololive-container.active .hololive-box {
+    transform: scale(1);
+    transition: .4s ease;
+}
+
+.hololive-box h1 {
+    color: #333;
+    line-height: 1;
+}
+
+.hololive-box p {
+    color: #333;
+    margin: 12px 0 20px;
+}
+
+.hololive-box .close-btn {
+    width: 100%;
+    height: 45px;
+    background: #6e78ff;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 10px;
+    color: #f2f2f2;
+    font-weight: 500;
+}
